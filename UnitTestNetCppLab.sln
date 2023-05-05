@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GoogleTest.Services", "GoogleTest.Services\GoogleTest.Services.vcxproj", "{55428FCC-D584-4CBE-BE3D-42569093EBB3}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GoogleTest.Tests", "GoogleTest.Tests\GoogleTest.Tests.vcxproj", "{BFE7F060-1FBB-4585-8BEA-718092EA38E3}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GoogleTestStatic.Tests", "GoogleTestStatic.Tests\GoogleTestStatic.Tests.vcxproj", "{2F6AE5D1-BC94-47A1-8333-51C6430A164D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{55428FCC-D584-4CBE-BE3D-42569093EBB3}.Debug|x64.ActiveCfg = Debug|x64
+		{55428FCC-D584-4CBE-BE3D-42569093EBB3}.Debug|x64.Build.0 = Debug|x64
+		{55428FCC-D584-4CBE-BE3D-42569093EBB3}.Release|x64.ActiveCfg = Release|x64
+		{55428FCC-D584-4CBE-BE3D-42569093EBB3}.Release|x64.Build.0 = Release|x64
+		{BFE7F060-1FBB-4585-8BEA-718092EA38E3}.Debug|x64.ActiveCfg = Debug|x64
+		{BFE7F060-1FBB-4585-8BEA-718092EA38E3}.Debug|x64.Build.0 = Debug|x64
+		{BFE7F060-1FBB-4585-8BEA-718092EA38E3}.Release|x64.ActiveCfg = Release|x64
+		{BFE7F060-1FBB-4585-8BEA-718092EA38E3}.Release|x64.Build.0 = Release|x64
+		{2F6AE5D1-BC94-47A1-8333-51C6430A164D}.Debug|x64.ActiveCfg = Debug|x64
+		{2F6AE5D1-BC94-47A1-8333-51C6430A164D}.Debug|x64.Build.0 = Debug|x64
+		{2F6AE5D1-BC94-47A1-8333-51C6430A164D}.Release|x64.ActiveCfg = Release|x64
+		{2F6AE5D1-BC94-47A1-8333-51C6430A164D}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9925872F-918B-481C-BFE7-EAE8A1F949C7}
+	EndGlobalSection
+EndGlobal

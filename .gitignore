@@ -1,0 +1,13 @@
+# build
+build
+x64
+
+# sonar-scanner
+.scannerwork
+.sonarqube
+
+# nuget
+packages
+
+# vstest
+TestResults
