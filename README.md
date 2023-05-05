@@ -13,11 +13,14 @@ This repo is used to demo one issue about vstest.console.exe.
 Run commands under root dir in git bash.
 
 ```shell
+# restore packages
 nuget restore
+nuget restore packages.config -PackagesDirectory packages
 
+# build
 msbuild.exe -t:rebuild -p:configuration=release -p:platform=x64 UnitTestNetCppLab.sln
 
-# Run vstest.console.exe to run unit tests and collect code coverage data
+# run vstest.console.exe to collect code coverage data
 packages/Microsoft.TestPlatform.17.5.0/tools/net462/Common7/IDE/Extensions/TestPlatform/vstest.console.exe x64/Release/GoogleTest.Tests.exe /TestAdapterPath:packages/GoogleTestAdapter.0.18.0/build/_common /Collect:"Code Coverage;Format=xml;CoverageFileName=coverage" /ResultsDirectory:build/unit-test
 ```
 
@@ -34,15 +37,15 @@ In this repo, it already prepared different folders cases. When I re-run above v
 
 The error message: `Data collect "Code Coverage" message: No code coverage data available. Profiler was not initialized.`
 
-Below is good and bad cases for different sub-folder:
+Below are good and bad cases for different sub-folders:
 
-1st time: Same folder name, under different folder
-- `$(solutionDir)UnitTestNetCpp` : Good Case
-- `$(solutionDir)sample/UnitTestNetCpp`: Bad Case
-
-2nd time: Under same folder, but different sub-dir name, shorter(length<=10) is good
+1st time: Under same folder, but different sub-dir name, shorter(length<=10) is good
 - `$(solutionDir)sample/UnitTestNetCpp`: Bad Case
 - `$(solutionDir)sample/UTNetCpp`: Good Case
+
+2st time: Same folder name, under different folder
+- `$(solutionDir)UnitTestNetCpp` : Good Case (although folder name length > 10)
+- `$(solutionDir)sample/UnitTestNetCpp`: Bad Case
 
 3rd time: Under same folder, but not sub-folder
 - `$(solutionDir)aaaaaaaaaa` : Good Case
@@ -53,5 +56,5 @@ Below is good and bad cases for different sub-folder:
 - `d:\aaaaaaaaaaaaaaaaaaaaa`: Good Case
 
 So guess its behavior:
-- related to the length of folder
-- related to the depth of folder
+- depends on the length of folder name
+- depends on the depth of folder
