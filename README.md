@@ -18,7 +18,7 @@ nuget restore
 nuget restore packages.config -PackagesDirectory packages
 
 # build
-msbuild.exe UnitTestNetCppLab.sln -t:rebuild -p:configuration=release -p:platform=x64 
+msbuild.exe UnitTestNetCppLab.sln -t:rebuild -p:configuration=release -p:platform=x64
 
 # run vstest.console.exe to collect code coverage data
 packages/Microsoft.TestPlatform.17.5.0/tools/net462/Common7/IDE/Extensions/TestPlatform/vstest.console.exe x64/Release/GoogleTest.Tests.exe /TestAdapterPath:packages/GoogleTestAdapter.0.18.0/build/_common /Collect:"Code Coverage;Format=xml;CoverageFileName=coverage" /ResultsDirectory:build/unit-test
